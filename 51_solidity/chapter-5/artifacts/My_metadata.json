@@ -1,0 +1,104 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "a",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name1",
+				"outputs": [
+					{
+						"internalType": "uint160",
+						"name": "",
+						"type": "uint160"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint160",
+						"name": "_a",
+						"type": "uint160"
+					}
+				],
+				"name": "name2",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"chapter-5/my1.sol": "My"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"chapter-5/my1.sol": {
+			"keccak256": "0x0c2e2602e7e22194d510b52c91399cc1a65e7355e78e811982235dcf22fa3641",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://be3a89ce83eaa0e6096314d4e2e6106a2942e57461c40b87f9143c130b864676",
+				"dweb:/ipfs/QmV8h8iomqkNARb69BqgUMjs2g5RLa86fRqmcpfXMPFVnr"
+			]
+		}
+	},
+	"version": 1
+}

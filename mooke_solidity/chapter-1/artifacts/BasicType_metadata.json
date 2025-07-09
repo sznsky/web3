@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "enumTest",
+				"outputs": [
+					{
+						"internalType": "enum BasicType.OrderState",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testInt",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"chapter-1/BasicTye.sol": "BasicType"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"chapter-1/BasicTye.sol": {
+			"keccak256": "0x356c1c4569c1c6d4b41f52acc8053fc7834637bb973265e75d0b4455ce4ddf81",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://8e25aa4a0a91c582f6a9a3a2a839b49b1dbb2d36295ae90bf29aaaeea5ef7a58",
+				"dweb:/ipfs/QmdJahagDsBDZ94ebRTEWJ1uLD2YCKKzJb7CG413aZ6fbq"
+			]
+		}
+	},
+	"version": 1
+}

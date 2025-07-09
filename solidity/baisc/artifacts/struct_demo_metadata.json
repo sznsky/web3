@@ -1,0 +1,92 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getUserInfo",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_age",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "_sex",
+						"type": "string"
+					}
+				],
+				"name": "setUser",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"baisc/10-storage-demo.sol": "struct_demo"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"baisc/10-storage-demo.sol": {
+			"keccak256": "0xc6546de059da4886cfd7bee91b5ce639a1755d1517dffa4969eece0989b586d7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://86886ab919de66fa955b5b84ae00d4e56a961d55e2d9d327213bdc5519ffd6e4",
+				"dweb:/ipfs/QmeodReXtc3ZVkEdKcZowxFqv1vnEL7yMKZ8taJEysj1Z5"
+			]
+		}
+	},
+	"version": 1
+}

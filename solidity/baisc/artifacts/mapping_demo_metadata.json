@@ -1,0 +1,83 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_score",
+						"type": "uint256"
+					}
+				],
+				"name": "addStore",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "getStore",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"baisc/08-mapping.sol": "mapping_demo"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"baisc/08-mapping.sol": {
+			"keccak256": "0x013e71147a2f879ebfaed0b460d4ced4ff9307ebf9d7f2955cfb879aed971b6c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7df3b065b79fe785bad5f843c1e39b4794f0ec656fadfcc4e70658e71851b271",
+				"dweb:/ipfs/QmR5YoGAkrP1C78a6Aqx5un1yLwKEvck144we3EuaygBnC"
+			]
+		}
+	},
+	"version": 1
+}

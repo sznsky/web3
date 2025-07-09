@@ -1,0 +1,72 @@
+{
+	"id": "b7a420d0f1201883f704393a107d6082",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.28",
+	"solcLongVersion": "0.8.28+commit.7893614a",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"chapter-1/ComplexValue.sol": {
+				"content": "// SPDX-License-Identifier: GPL-3.0\r\n\r\npragma solidity >=0.8.2  <0.9.0;\r\n\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"sources": {
+			"chapter-1/ComplexValue.sol": {
+				"ast": {
+					"absolutePath": "chapter-1/ComplexValue.sol",
+					"exportedSymbols": {},
+					"id": 2,
+					"license": "GPL-3.0",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								">=",
+								"0.8",
+								".2",
+								"<",
+								"0.9",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "39:32:0"
+						}
+					],
+					"src": "39:36:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

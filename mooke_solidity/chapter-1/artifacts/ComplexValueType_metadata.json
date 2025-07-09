@@ -1,0 +1,105 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "testAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testContract",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testFixedByteArray",
+				"outputs": [
+					{
+						"internalType": "bytes3",
+						"name": "",
+						"type": "bytes3"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testFixedByteArray1",
+				"outputs": [
+					{
+						"internalType": "bytes1",
+						"name": "",
+						"type": "bytes1"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testMyAdddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"chapter-1/ComplexValueType.sol": "ComplexValueType"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"chapter-1/ComplexValueType.sol": {
+			"keccak256": "0x72d6358557adf99f550eb880ee3b97ff160929fa0ca6c40039f52c91563e13f3",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://dfce62faf150f07ff10f36c3f97e7f5f53ee5e4d26331fcab616cd575c5c21f1",
+				"dweb:/ipfs/QmY7sjVomZjvbev3VcDjnVNdABTvjZPhrf3LmTiBbL32t6"
+			]
+		}
+	},
+	"version": 1
+}

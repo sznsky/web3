@@ -1,0 +1,91 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_c",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_c",
+						"type": "uint256"
+					}
+				],
+				"name": "setCount",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "合约",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"05-function-demo.sol": "func_demo2"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"05-function-demo.sol": {
+			"keccak256": "0x865cd6e468fe840f6c7c3780ff5a94507324f395ea845121089ca1d979166f55",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://979ef47af2e2d5ce7de44cada88d0f43f29ff9afb47ce733ab27f519364b7d7a",
+				"dweb:/ipfs/QmQ6BfGcDQstWAx96sjZRxfLSqBEsM4XAo1JiJhwpwdjmL"
+			]
+		}
+	},
+	"version": 1
+}

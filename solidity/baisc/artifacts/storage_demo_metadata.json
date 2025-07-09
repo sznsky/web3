@@ -1,0 +1,161 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "adminUser",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "age",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "sex",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getUser",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint8",
+								"name": "age",
+								"type": "uint8"
+							},
+							{
+								"internalType": "string",
+								"name": "sex",
+								"type": "string"
+							}
+						],
+						"internalType": "struct storage_demo.User",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "_age",
+						"type": "uint8"
+					}
+				],
+				"name": "setAge1",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "_age",
+						"type": "uint8"
+					}
+				],
+				"name": "setAge2",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "_age",
+						"type": "uint8"
+					}
+				],
+				"name": "setAge4",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_age",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "_sex",
+						"type": "string"
+					}
+				],
+				"name": "setUser",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"baisc/10-storage-demo.sol": "storage_demo"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"baisc/10-storage-demo.sol": {
+			"keccak256": "0x4655d329c3138269e636fdaebdd6202363cb1a29a2f5f648dfe13fdb6d181787",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://701db1676efbe7c947f37de850f732687fb2057305fff157b04e3bbafb8cda2d",
+				"dweb:/ipfs/QmX1E9bx3ZbGqCTj5V4jCM4oeWp2EQGCwgnTPf8wPh6Wrc"
+			]
+		}
+	},
+	"version": 1
+}

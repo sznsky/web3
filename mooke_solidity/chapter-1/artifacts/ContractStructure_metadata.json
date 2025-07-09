@@ -1,0 +1,102 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_bal",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "oldValue",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "incre",
+						"type": "uint256"
+					}
+				],
+				"name": "BalanceAdded",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_incre",
+						"type": "uint256"
+					}
+				],
+				"name": "addBalance",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "balance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"chapter-1/ContractStructure.sol": "ContractStructure"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"chapter-1/ContractStructure.sol": {
+			"keccak256": "0xbeb5ee7d34a4f3c7024673b83dba94c58f82ca3819bf4d123d50b5dfe3598866",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://6ff02af75b9fafe79f1d69ee51ac19ef5c2e2547aef309413ca856096c0b31e4",
+				"dweb:/ipfs/QmSUDwc6BvPjP9TGmpsGzRpzrLt2oNudM1PyjzyPvwMLGq"
+			]
+		}
+	},
+	"version": 1
+}

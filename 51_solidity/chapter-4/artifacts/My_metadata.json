@@ -1,0 +1,136 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "a",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name2",
+				"outputs": [
+					{
+						"internalType": "uint160",
+						"name": "",
+						"type": "uint160"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint160",
+						"name": "_a",
+						"type": "uint160"
+					}
+				],
+				"name": "name3",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name4",
+				"outputs": [
+					{
+						"internalType": "bytes20",
+						"name": "",
+						"type": "bytes20"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes20",
+						"name": "_a",
+						"type": "bytes20"
+					}
+				],
+				"name": "name5",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"chapter-4/my.sol": "My"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"chapter-4/my.sol": {
+			"keccak256": "0x72ef94e663003367fac8e0f5911018b8d0daf9f4520abf1bc5e1e00c3e076060",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://043a2ee60c1bc27d02fab80dde8eed8dceb18b206a2a627beea597e5f6409ab0",
+				"dweb:/ipfs/QmPYoXGzunhSxBreNBbRbFQzRkNYvB7nMm54L1eFNpxo1A"
+			]
+		}
+	},
+	"version": 1
+}

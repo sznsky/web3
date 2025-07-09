@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					}
+				],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"chapter-4/my4.sol": "My4"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"chapter-4/my4.sol": {
+			"keccak256": "0x762f35b977abc98e1eb7598c3c9e0da5eeb0a27c67a8a8a3f3d31d2569ba43a2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e19a04735e78018de9ab752a4025250477921fe967afb25465bd7d944917fb26",
+				"dweb:/ipfs/QmUKG69iWMaxNtMu8RUNUj68CzuZXUqG6kBonCCBZxoq7H"
+			]
+		}
+	},
+	"version": 1
+}
