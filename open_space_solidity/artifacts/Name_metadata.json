@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"w1d3/Bank.sol": "Name"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"w1d3/Bank.sol": {
+			"keccak256": "0x1a3522d941584c378e7ca4c64788d9f181bf82fd1433b68008562f7ce547480a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6c839f7a9ba5322233f9aaf596d48749adecdde8a5f68baa260046206fbb78a7",
+				"dweb:/ipfs/QmUKKGqEwZz7Wsksj7oTUhwUM1abFQvMHpdEZh327bZJGw"
+			]
+		}
+	},
+	"version": 1
+}

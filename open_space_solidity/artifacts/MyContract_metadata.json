@@ -1,0 +1,70 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "x",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "y",
+						"type": "uint256"
+					}
+				],
+				"name": "add",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"w1d3/testInherit.sol": "MyContract"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"w1d3/testInherit.sol": {
+			"keccak256": "0x0f2d8c8bf49fee6fb59058d27db7faadb58a51ab1875743f1e33adb1025516d7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9e3fe508de0098b4a311b04fdae446e3b0c8a426c5304bdb946ad2ddd3810b81",
+				"dweb:/ipfs/QmWEDhJuUxbZn99rRevgGPmqUSiqNLNBXgjNU3Hjoe9ohp"
+			]
+		}
+	},
+	"version": 1
+}

@@ -11,41 +11,6 @@
 				"type": "constructor"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "current",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "required",
-						"type": "uint256"
-					}
-				],
-				"name": "InsufficientBalance",
-				"type": "error"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "oldOwner",
-						"type": "address"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "newOwner",
-						"type": "address"
-					}
-				],
-				"name": "OwnershipTransferred",
-				"type": "event"
-			},
-			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -63,13 +28,13 @@
 					{
 						"indexed": false,
 						"internalType": "address",
-						"name": "sender",
+						"name": "contractAddress",
 						"type": "address"
 					},
 					{
 						"indexed": false,
 						"internalType": "address",
-						"name": "owner",
+						"name": "sender",
 						"type": "address"
 					}
 				],
@@ -79,20 +44,19 @@
 			{
 				"inputs": [
 					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
 						"internalType": "address",
-						"name": "",
+						"name": "contractAddress",
 						"type": "address"
 					}
 				],
-				"name": "balance_map",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
+				"name": "adminWithdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -106,57 +70,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "top3Address",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "top3Balance",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "withdraw",
-				"outputs": [],
-				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
@@ -177,7 +90,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"w1d3/Bank.sol": "Bank"
+			"w1d3/Bank.sol": "Admin"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
