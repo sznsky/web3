@@ -83,6 +83,30 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "tokensReceived",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
 						"name": "_amount",
 						"type": "uint256"
@@ -120,7 +144,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"w2d1/BaseERC20.sol": "TokenBank"
+			"w2d1/BaseERC20.sol": "TokenBankV2"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},

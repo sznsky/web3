@@ -231,6 +231,30 @@
 				],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transferWithCallBack",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -240,13 +264,17 @@
 		},
 		"userdoc": {
 			"kind": "user",
-			"methods": {},
+			"methods": {
+				"transferWithCallBack(address,uint256)": {
+					"notice": "有hook功能的转账函数"
+				}
+			},
 			"version": 1
 		}
 	},
 	"settings": {
 		"compilationTarget": {
-			"w1d5/BaseERC20.sol": "BaseERC20"
+			"w2d1/BaseERC20.sol": "BaseERC20"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -260,12 +288,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"w1d5/BaseERC20.sol": {
-			"keccak256": "0xd769468862e21978dbfb403bf92bcb4148db336b45028f6710cbcd46d92b0fe0",
+		"w2d1/BaseERC20.sol": {
+			"keccak256": "0xede8f23257b04d6b0eb98369ff0842dcc54975b70b41985cfc7def30e7479540",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c4a656747140212d5d311245512b9c2022df8628fc92dcb9e7df6c778bfdd3f8",
-				"dweb:/ipfs/QmTd4MDSCvo9UFWT6Bovjnc7sDvrrkgvKXPayqALvhE9WK"
+				"bzz-raw://de1b0f5a32fa249ace65ef9c9d2458f741860ab20f07d7da1ef72522addc337c",
+				"dweb:/ipfs/QmSQCcS4cF2PKVTUTSfCkoxWCn2hWkXXyR1WR4aT15dhvu"
 			]
 		}
 	},

@@ -4,12 +4,35 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "tokensReceived",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
 		"devdoc": {
-			"details": "Math operations with safety checks that throw on error",
 			"kind": "dev",
 			"methods": {},
-			"title": "SafeMath",
 			"version": 1
 		},
 		"userdoc": {
@@ -20,7 +43,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"w2d1/BaseERC20.sol": "SafeMath"
+			"w2d1/BaseERC20.sol": "TokenRecipient"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
