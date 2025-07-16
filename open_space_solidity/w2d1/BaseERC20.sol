@@ -205,13 +205,14 @@ interface TokenRecipient {
 
 contract TokenBankV2 is TokenBank, TokenRecipient{
 
-    // 无参数的构造函数
+    // 构造函数
     constructor(address _tokenAddress) TokenBank(_tokenAddress) {}
 
     // tokensReceived 接受记账函数
     function tokensReceived (address _from, uint _amount) external override returns(bool) {
         // 回调函数必须是合约地址
         require(msg.sender == address(_from), "Not the valid address!");
+        // 判断金额
         require(_amount > 0, "Deposit amount must be greater than zero");
         balances[_from] += _amount;
         return true;

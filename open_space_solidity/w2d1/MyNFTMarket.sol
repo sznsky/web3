@@ -107,7 +107,7 @@
         nft.transferFrom(listing.seller, from, tokenId);
         
         emit NFTSold(nftContract, tokenId, listing.seller, from, listing.price);
-        // 删除已经交易掉nft
+        // 删除列表中已经交易掉nft
         delete listings[nftContract][tokenId];
         
         return true;
