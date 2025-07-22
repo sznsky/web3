@@ -246,11 +246,11 @@
 			]
 		},
 		"w2d2/TokenBankV2.sol": {
-			"keccak256": "0x72ebfb7d5aaea3509fee5410868c4b55ca1780174e5bac07b65fca5f28a31e3a",
+			"keccak256": "0xb2c976b32f118341ab8cbfc47c262858991d5dafcd3a08e07b2a7a5ca95b56f6",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://69218005f7b6abbc7fde55c7f16a660a5202720619bc9d74727fbb232c5f29bd",
-				"dweb:/ipfs/QmNfaRbnMaJowrqHhywNcG9L7pBsGusb3Z4CFziAqnRPRn"
+				"bzz-raw://84fe5bb5e046bff04b18053a30f5452134feade07f95d4ebcadbbaf9b6b69c96",
+				"dweb:/ipfs/QmTe6FMYkMpM7MogC7THXTHVhvq28BtvUdXhgrs4waCTfr"
 			]
 		}
 	},

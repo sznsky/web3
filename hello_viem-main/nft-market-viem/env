@@ -1,0 +1,4 @@
+PRIVATE_KEY="0x52ecbca9846f90b3916429a7faae3affab7c0b392879bb6691bd49b648a9b054"
+RPC_URL="http://127.0.0.1:8545"
+KEYSTORE_PATH="/Users/emmett/.foundry/keystores/test_test"
+KEYSTORE_PASSWORD="123456"

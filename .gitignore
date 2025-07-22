@@ -1,0 +1,6 @@
+**/build/
+artifacts/
+.states/
+.deps/
+*.log
+**/node_modules/
