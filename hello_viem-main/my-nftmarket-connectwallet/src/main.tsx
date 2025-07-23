@@ -1,27 +1,32 @@
-// src/main.tsx
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { WagmiProvider } from "wagmi"; // 导入 WagmiProvider
-import { AppKitProvider } from "@reown/appkit/react";
-import { wagmiConfig } from "./wallet";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query"; // 新增导入
+import { WagmiConfig, createConfig, configureChains } from "wagmi";
+import { mainnet } from "wagmi/chains";
+import { publicProvider } from "wagmi/providers/public";
+import { walletConnectProvider } from "@wagmi/core/providers/walletConnect";
 
-// 新增 QueryClient 实例
-const queryClient = new QueryClient();
+// 你需要在 WalletConnect 官网申请一个 projectId
+const projectId = "你的WalletConnect项目ID";
+
+const { chains, publicClient } = configureChains(
+  [mainnet],
+  [
+    walletConnectProvider({ projectId }),
+    publicProvider(),
+  ]
+);
+
+const config = createConfig({
+  autoConnect: true,
+  publicClient,
+  chains,
+});
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    {/* WagmiProvider 替代了旧的 WagmiConfig */}
-    <WagmiProvider config={wagmiConfig}>
-      <QueryClientProvider client={queryClient}>
-        {/* AppKitProvider 现在需要接收 wagmiConfig */}
-        <AppKitProvider config={wagmiConfig}>
-          <App />
-        </AppKitProvider>
-      </QueryClientProvider>
-    </WagmiProvider>
+    <WagmiConfig config={config}>
+      <App />
+    </WagmiConfig>
   </React.StrictMode>
 );
-
-

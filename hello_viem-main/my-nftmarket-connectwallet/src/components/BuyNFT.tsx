@@ -1,76 +1,57 @@
-// src/components/BuyNFT.tsx
-import { useEffect, useState } from 'react';
-import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagmi';
-import { erc20Abi, parseUnits, type Address } from 'viem';
-import NFTMarketAbi from '../abis/NFTMarket.json';
+import React, { useState } from "react";
+import { useAccount, useWriteContract, useWaitForTransactionReceipt } from "wagmi";
+import NFTMarketAbi from "../abis/NFTMarket.json";
+import { parseUnits, type Address } from "viem";
 
-const tokenAddress: Address = '0xYourTokenAddress'; // ⚠️ 替换成你的 ERC20 Token 合约地址
-const marketAddress: Address = '0xYourMarketContractAddress'; // ⚠️ 替换成你的市场合约地址
+const marketAddress: Address = "0xYourMarketContractAddress"; // 替换为你的市场合约地址
 
-interface BuyNFTProps {
-    listingId: number;
-    price: string;
-}
-
-export function BuyNFT({ listingId, price }: BuyNFTProps) {
+export default function BuyNFT() {
   const { address } = useAccount();
+  const [nftAddress, setNftAddress] = useState("");
+  const [tokenId, setTokenId] = useState("");
+  const [price, setPrice] = useState("0.01");
 
-  // Approve hooks
-  const { data: approveHash, writeContract: approve, isPending: isApproving, error: approveError } = useWriteContract();
-  const { isSuccess: isApproveConfirmed } = useWaitForTransactionReceipt({ hash: approveHash });
+  const { data: buyHash, writeContract: buyWriteContract, isPending: isBuying, error: buyError } = useWriteContract();
+  const { isLoading: isBuyConfirming, isSuccess: isBuyConfirmed } = useWaitForTransactionReceipt({ hash: buyHash });
 
-  // Purchase hooks
-  const { data: purchaseHash, writeContract: purchase, isPending: isPurchasing, error: purchaseError } = useWriteContract();
-  const { isLoading: isConfirming, isSuccess: isPurchaseConfirmed } = useWaitForTransactionReceipt({ hash: purchaseHash });
-
-  // 当 Token 授权成功后，自动执行购买操作
-  useEffect(() => {
-    if (isApproveConfirmed) {
-      console.log('Token approve confirmed, now purchasing...');
-      purchase({
-        address: marketAddress,
-        abi: NFTMarketAbi,
-        functionName: 'purchase',
-        args: [BigInt(listingId)],
-      });
-    }
-  }, [isApproveConfirmed, purchase, listingId]);
-
-
-  const handleBuy = async () => {
-    if (!address) {
-      alert('请先连接钱包');
-      return;
-    }
-    // 1. 发起 Token 授权交易
-    approve({
-      address: tokenAddress,
-      abi: erc20Abi,
-      functionName: 'approve',
-      args: [marketAddress, parseUnits(price, 18)],
+  const handleBuy = () => {
+    if (!address || !nftAddress || !tokenId || !price) return;
+    buyWriteContract({
+      address: marketAddress,
+      abi: NFTMarketAbi,
+      functionName: "buyItem",
+      args: [nftAddress as Address, BigInt(tokenId)],
+      value: parseUnits(price, 18), // 如果需要支付ETH，或根据合约实际参数调整
     });
   };
 
-  const isWorking = isApproving || isPurchasing || isConfirming;
-
   return (
-    <div style={{ border: '1px solid #ccc', padding: '1rem', marginTop: '1rem' }}>
-      <h3 className="text-lg font-semibold">购买 NFT</h3>
-      <p>ID: {listingId}</p>
-      <p>价格: {price} TOKEN</p>
-      <button 
-        onClick={handleBuy} 
-        disabled={isWorking}
-        className="bg-green-500 text-white px-4 py-2 rounded w-full"
-      >
-        {isApproving && '等待授权确认...'}
-        {isPurchasing && '等待购买确认...'}
-        {isConfirming && '交易确认中...'}
-        {!isWorking && `购买 NFT #${listingId}`}
+    <div style={{ border: "1px solid #ccc", padding: 16, margin: "16px 0" }}>
+      <h2>购买 NFT</h2>
+      <input
+        placeholder="NFT 合约地址"
+        value={nftAddress}
+        onChange={(e) => setNftAddress(e.target.value)}
+        style={{ width: "100%", marginBottom: 8 }}
+      />
+      <input
+        placeholder="Token ID"
+        value={tokenId}
+        onChange={(e) => setTokenId(e.target.value)}
+        style={{ width: "100%", marginBottom: 8 }}
+      />
+      <input
+        placeholder="价格 (TOKEN)"
+        type="number"
+        value={price}
+        onChange={(e) => setPrice(e.target.value)}
+        style={{ width: "100%", marginBottom: 8 }}
+      />
+      <button onClick={handleBuy} disabled={isBuying || isBuyConfirming} style={{ width: "100%" }}>
+        {isBuying ? "等待钱包确认..." : isBuyConfirming ? "购买中..." : "购买 NFT"}
       </button>
-
-      {isPurchaseConfirmed && <div style={{color: 'green', marginTop: '10px'}}>购买成功! Tx: {purchaseHash}</div>}
-      {(approveError || purchaseError) && <div style={{color: 'red', marginTop: '10px'}}>错误: {approveError?.message || purchaseError?.message}</div>}
+      {isBuyConfirmed && <div style={{ color: "green", marginTop: 10 }}>NFT 购买成功! Tx: {buyHash}</div>}
+      {buyError && <div style={{ color: "red", marginTop: 10 }}>购买失败: {buyError.message}</div>}
     </div>
   );
 }
