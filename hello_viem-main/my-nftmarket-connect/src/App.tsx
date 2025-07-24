@@ -2,12 +2,17 @@ import React, { useState } from "react";
 import { createWalletClient, http, parseEther } from "viem";
 import { mainnet } from "viem/chains";
 import EthereumProvider from "@walletconnect/ethereum-provider";
+import NFTMARKET_ABI_JSON from "./abis/NFTMarket.json";
+//import MYERC721_ABI_JSON from "./abis/MyERC721.json"; // 假设你有一个 NFTMarket.json 文件包含 ABI
+//import MYERC20_ABI_JSON from "./abis/MyERC20.json"; 
 
 // TODO: 替换为你的 NFTMarket 合约地址和 ABI
-const NFTMARKET_ADDRESS = "0xYourNFTMarketAddress";
-const NFTMARKET_ABI = [
-  // ...你的合约 ABI...
-];
+const NFTMARKET_ADDRESS = "0x7f8770B0923a52f35168C66A5d65e8AF4bf2D44B";
+const NFTMARKET_ABI = NFTMARKET_ABI_JSON.abi;
+
+//const MYERC20_ABI = MYERC20_ABI_JSON.abi;
+const MYERC721_ADDRESS = "0x633b4368f731f01abce050B6d7272e4f1E19Fba9";
+//const MYERC721_ABI = MYERC721_ABI_JSON.abi;
 
 export default function App() {
   const [address, setAddress] = useState<string>("");
@@ -45,8 +50,8 @@ export default function App() {
       await walletClient.writeContract({
         address: NFTMARKET_ADDRESS,
         abi: NFTMARKET_ABI,
-        functionName: "listNFT",
-        args: [tokenId, parseEther(price)],
+        functionName: "list",
+        args: [MYERC721_ADDRESS,tokenId, parseEther(price)],
       });
       alert("上架成功！");
     } catch (e) {

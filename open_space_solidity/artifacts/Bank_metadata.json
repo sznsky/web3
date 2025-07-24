@@ -27,17 +27,54 @@
 				"type": "error"
 			},
 			{
-				"inputs": [],
-				"name": "administrator",
-				"outputs": [
+				"anonymous": false,
+				"inputs": [
 					{
-						"internalType": "address payable",
-						"name": "",
+						"indexed": true,
+						"internalType": "address",
+						"name": "oldOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
 						"type": "address"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "adminWithdrawMessage",
+				"type": "event"
 			},
 			{
 				"inputs": [
@@ -60,25 +97,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "getTop3Address",
+				"name": "owner",
 				"outputs": [
 					{
-						"internalType": "address[3]",
+						"internalType": "address payable",
 						"name": "",
-						"type": "address[3]"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getTop3Balance",
-				"outputs": [
-					{
-						"internalType": "uint256[3]",
-						"name": "",
-						"type": "uint256[3]"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -153,7 +177,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"w1d3/Bank1.sol": "Bank"
+			"w1d3/Bank.sol": "Bank"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -167,12 +191,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"w1d3/Bank1.sol": {
-			"keccak256": "0xe7a4a42a4884da7ee137c62449ddc49c410cd718c2a62c04c9d5e7db12d2696f",
+		"w1d3/Bank.sol": {
+			"keccak256": "0xd30e4cc998a359fa6fbc394058be9b4f12de969538ecd8e0a206ea94e5c09de7",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8458ae00b86ed4382848151d32f2a2396923c0843ee9fff9920926d4067463ab",
-				"dweb:/ipfs/QmbzTXmMfrRRVtrWqYjNQUA8gybXHZ75ubWN6qLSXEk3nJ"
+				"bzz-raw://c964ad43af18c6b72f45d74ab46270ba118dc7d0ac5e1367b7acc6793b012757",
+				"dweb:/ipfs/QmPuy2bfRQzD5G8YeYDZUDAfbgx5ffsRcWfLBQFW8z88YS"
 			]
 		}
 	},
