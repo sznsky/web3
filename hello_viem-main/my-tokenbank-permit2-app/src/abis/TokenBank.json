@@ -1,0 +1,435 @@
+{
+    "abi": [
+        {
+            "type": "constructor",
+            "inputs": [
+                {
+                    "name": "_permit2",
+                    "type": "address",
+                    "internalType": "address"
+                }
+            ],
+            "stateMutability": "nonpayable"
+        },
+        {
+            "type": "function",
+            "name": "PERMIT2",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "address",
+                    "internalType": "address"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "balances",
+            "inputs": [
+                {
+                    "name": "",
+                    "type": "address",
+                    "internalType": "address"
+                },
+                {
+                    "name": "",
+                    "type": "address",
+                    "internalType": "address"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "depositWithPermit2",
+            "inputs": [
+                {
+                    "name": "permit",
+                    "type": "tuple",
+                    "internalType": "struct ISignatureTransfer.PermitTransferFrom",
+                    "components": [
+                        {
+                            "name": "permitted",
+                            "type": "tuple",
+                            "internalType": "struct ISignatureTransfer.TokenPermissions",
+                            "components": [
+                                {
+                                    "name": "token",
+                                    "type": "address",
+                                    "internalType": "address"
+                                },
+                                {
+                                    "name": "amount",
+                                    "type": "uint256",
+                                    "internalType": "uint256"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "nonce",
+                            "type": "uint256",
+                            "internalType": "uint256"
+                        },
+                        {
+                            "name": "deadline",
+                            "type": "uint256",
+                            "internalType": "uint256"
+                        }
+                    ]
+                },
+                {
+                    "name": "transferDetails",
+                    "type": "tuple",
+                    "internalType": "struct ISignatureTransfer.SignatureTransferDetails",
+                    "components": [
+                        {
+                            "name": "to",
+                            "type": "address",
+                            "internalType": "address"
+                        },
+                        {
+                            "name": "requestedAmount",
+                            "type": "uint256",
+                            "internalType": "uint256"
+                        }
+                    ]
+                },
+                {
+                    "name": "signature",
+                    "type": "bytes",
+                    "internalType": "bytes"
+                }
+            ],
+            "outputs": [],
+            "stateMutability": "nonpayable"
+        },
+        {
+            "type": "function",
+            "name": "getBalance",
+            "inputs": [
+                {
+                    "name": "_token",
+                    "type": "address",
+                    "internalType": "address"
+                },
+                {
+                    "name": "_user",
+                    "type": "address",
+                    "internalType": "address"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "event",
+            "name": "Deposit",
+            "inputs": [
+                {
+                    "name": "user",
+                    "type": "address",
+                    "indexed": true,
+                    "internalType": "address"
+                },
+                {
+                    "name": "token",
+                    "type": "address",
+                    "indexed": true,
+                    "internalType": "address"
+                },
+                {
+                    "name": "amount",
+                    "type": "uint256",
+                    "indexed": false,
+                    "internalType": "uint256"
+                }
+            ],
+            "anonymous": false
+        }
+    ],
+    "bytecode": {
+        "object": "0x60a0346100bc57601f6104cb38819003918201601f19168301916001600160401b038311848410176100c1578084926020946040528339810103126100bc57516001600160a01b0381168082036100bc5715610077576080526040516103f390816100d88239608051818181610193015261035d0152f35b60405162461bcd60e51b815260206004820152601760248201527f496e76616c6964205065726d69743220616464726573730000000000000000006044820152606490fd5b600080fd5b634e487b7160e01b600052604160045260246000fdfe608060408181526004918236101561001657600080fd5b600092833560e01c9182636afdd8501461034957508163a861e408146100bc57508063c23f001f146100a05763d4fac45d1461005157600080fd5b3461009c578060031936011261009c5760209161006c61038c565b826100756103a7565b6001600160a01b039283168452838652922091166000908152908352819020549051908152f35b5080fd5b503461009c578060031936011261009c5760209161006c61038c565b90503461034557366003190160e081126103415760808112610341578251606081019267ffffffffffffffff928285108486111761032a57851361033d5760a082018481108482111761032a57855261011361038c565b845260249384356080840152825260208201936044358552858301936064358552866083193601126103265760c43590808211610322573660238301121561032257818401359681881161031e573684898501011161031e576001600160a01b039660843588811692919083900361031a573083036102e457908b9291897f00000000000000000000000000000000000000000000000000000000000000001691823b156102e0578a9689948b938f9360208995519b8c998a9863187945bd60e11b8a5251918251169089015201518c87015251604486015251606485015260848401528260a4359d8e60a48301523360c483015261010060e483015280610104830152808b6101249401848401378181018301849052601f01601f191681010301925af180156102d6576102b1575b505083835151168752866020528587203360005260205285600020908154928684018094116102a05750505551511691519081527f5548c837ab068cf56a2c2479df0882a4922fd203edb7517321831d95078c5f6260203392a380f35b634e487b7160e01b89526011905287fd5b81989298116102c4578652953880610243565b5060418792634e487b7160e01b835252fd5b88513d8b823e3d90fd5b8480fd5b8a5162461bcd60e51b815260208189015260118188015270125b9d985b1a59081c9958da5c1a595b9d607a1b6044820152606490fd5b8b80fd5b8980fd5b8880fd5b8780fd5b634e487b7160e01b875260418252602487fd5b8580fd5b8380fd5b8280fd5b84903461009c578160031936011261009c577f00000000000000000000000000000000000000000000000000000000000000006001600160a01b03168152602090f35b600435906001600160a01b03821682036103a257565b600080fd5b602435906001600160a01b03821682036103a25756fea2646970667358221220d085283c854133409550c5b46208c474bf8a64ba1cadd673ae506723f763abef64736f6c63430008110033",
+        "sourceMap": "257:1571:31:-:0;;;;;;;;;;;;;-1:-1:-1;;257:1571:31;;;;-1:-1:-1;;;;;257:1571:31;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;257:1571:31;;;;;;;524:22;257:1571;;584:18;;257:1571;;;;;;;;584:18;257:1571;;;;;;;;;;;;;;-1:-1:-1;;;257:1571:31;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;257:1571:31;;;;;;-1:-1:-1;257:1571:31;;;;;-1:-1:-1;257:1571:31",
+        "linkReferences": {}
+    },
+    "deployedBytecode": {
+        "object": "0x608060408181526004918236101561001657600080fd5b600092833560e01c9182636afdd8501461034957508163a861e408146100bc57508063c23f001f146100a05763d4fac45d1461005157600080fd5b3461009c578060031936011261009c5760209161006c61038c565b826100756103a7565b6001600160a01b039283168452838652922091166000908152908352819020549051908152f35b5080fd5b503461009c578060031936011261009c5760209161006c61038c565b90503461034557366003190160e081126103415760808112610341578251606081019267ffffffffffffffff928285108486111761032a57851361033d5760a082018481108482111761032a57855261011361038c565b845260249384356080840152825260208201936044358552858301936064358552866083193601126103265760c43590808211610322573660238301121561032257818401359681881161031e573684898501011161031e576001600160a01b039660843588811692919083900361031a573083036102e457908b9291897f00000000000000000000000000000000000000000000000000000000000000001691823b156102e0578a9689948b938f9360208995519b8c998a9863187945bd60e11b8a5251918251169089015201518c87015251604486015251606485015260848401528260a4359d8e60a48301523360c483015261010060e483015280610104830152808b6101249401848401378181018301849052601f01601f191681010301925af180156102d6576102b1575b505083835151168752866020528587203360005260205285600020908154928684018094116102a05750505551511691519081527f5548c837ab068cf56a2c2479df0882a4922fd203edb7517321831d95078c5f6260203392a380f35b634e487b7160e01b89526011905287fd5b81989298116102c4578652953880610243565b5060418792634e487b7160e01b835252fd5b88513d8b823e3d90fd5b8480fd5b8a5162461bcd60e51b815260208189015260118188015270125b9d985b1a59081c9958da5c1a595b9d607a1b6044820152606490fd5b8b80fd5b8980fd5b8880fd5b8780fd5b634e487b7160e01b875260418252602487fd5b8580fd5b8380fd5b8280fd5b84903461009c578160031936011261009c577f00000000000000000000000000000000000000000000000000000000000000006001600160a01b03168152602090f35b600435906001600160a01b03821682036103a257565b600080fd5b602435906001600160a01b03821682036103a25756fea2646970667358221220d085283c854133409550c5b46208c474bf8a64ba1cadd673ae506723f763abef64736f6c63430008110033",
+        "sourceMap": "257:1571:31:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;:::i;:::-;-1:-1:-1;;;;;257:1571:31;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;-1:-1:-1;;257:1571:31;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;257:1571:31;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;257:1571:31;;;;;;;;;;;;;;879:4;849:35;;257:1571;;977:7;;;;;;257:1571;958:196;;;;;;257:1571;;;;;;;;;;;;;;;;;;;;958:196;;257:1571;;;;;958:196;;;257:1571;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1067:10;257:1571;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;257:1571:31;;;958:196;;;;;;;;;;;257:1571;1198:16;;;;;257:1571;;;;;;;;;;1067:10;257:1571;;;;;;;;;;;;;;;;;;;;;;1303:16;257:1571;;;;;;;1283:76;257:1571;1067:10;1283:76;;257:1571;;;-1:-1:-1;;;257:1571:31;;;;;;;958:196;257:1571;;;;;;;;;958:196;;;;;257:1571;;;;;;;;;;;;958:196;257:1571;;;;;;;;;958:196;257:1571;;;;;;-1:-1:-1;;;257:1571:31;;;;;;;;;;;;-1:-1:-1;;;257:1571:31;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;257:1571:31;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;282:32;-1:-1:-1;;;;;257:1571:31;;;;;;;;;;-1:-1:-1;;;;;257:1571:31;;;;;;:::o;:::-;;;;;;;;-1:-1:-1;;;;;257:1571:31;;;;;;:::o",
+        "linkReferences": {},
+        "immutableReferences": {
+            "38215": [
+                {
+                    "start": 403,
+                    "length": 32
+                },
+                {
+                    "start": 861,
+                    "length": 32
+                }
+            ]
+        }
+    },
+    "methodIdentifiers": {
+        "PERMIT2()": "6afdd850",
+        "balances(address,address)": "c23f001f",
+        "depositWithPermit2(((address,uint256),uint256,uint256),(address,uint256),bytes)": "a861e408",
+        "getBalance(address,address)": "d4fac45d"
+    },
+    "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_permit2\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Deposit\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"PERMIT2\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"balances\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"internalType\":\"struct ISignatureTransfer.TokenPermissions\",\"name\":\"permitted\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"nonce\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"internalType\":\"struct ISignatureTransfer.PermitTransferFrom\",\"name\":\"permit\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"requestedAmount\",\"type\":\"uint256\"}],\"internalType\":\"struct ISignatureTransfer.SignatureTransferDetails\",\"name\":\"transferDetails\",\"type\":\"tuple\"},{\"internalType\":\"bytes\",\"name\":\"signature\",\"type\":\"bytes\"}],\"name\":\"depositWithPermit2\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"}],\"name\":\"getBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/TokenBank.sol\":\"TokenBank\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":ds-test/=lib/permit2/lib/forge-std/lib/ds-test/src/\",\":forge-gas-snapshot/=lib/permit2/lib/forge-gas-snapshot/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":permit2/=lib/permit2/\",\":solmate/=lib/permit2/lib/solmate/\"],\"viaIR\":true},\"sources\":{\"lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"lib/permit2/src/interfaces/IEIP712.sol\":{\"keccak256\":\"0xfdccf2b9639070803cd0e4198427fb0df3cc452ca59bd3b8a0d957a9a4254138\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f7c936ac42ce89e827db905a1544397f8bdf46db34cdb6aa1b90dea42fdb4c72\",\"dweb:/ipfs/QmVgurxo1N31qZqkPBirw9Z7S9tLYmv6jSwQp8R8ur2cBk\"]},\"lib/permit2/src/interfaces/ISignatureTransfer.sol\":{\"keccak256\":\"0xe6df9966f8841dc3958ee86169c89de97e7f614c81c28b9dc947b12d732df64e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3d4eafdee7f48c3be8350a94eb6edd0bfb2af2c105df65787a77174f356c0317\",\"dweb:/ipfs/QmY1j2adeeAhNpn6cUuthemxGCdLXHTfyMh9yTKsY4mZ2d\"]},\"src/TokenBank.sol\":{\"keccak256\":\"0xc035206bfd4b2019eb134e50e16c98a53f2bfb3c3eb526886785c79590b4794a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a22063ae7145eb8688209d5f4032545074878da56b0cd47133fff315c3bf6dc4\",\"dweb:/ipfs/QmSRXVMGACs8HVRpd7CGKPGg1yGgHxFFeKsbg8smEvou6T\"]}},\"version\":1}",
+    "metadata": {
+        "compiler": {
+            "version": "0.8.17+commit.8df45f5f"
+        },
+        "language": "Solidity",
+        "output": {
+            "abi": [
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "_permit2",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "nonpayable",
+                    "type": "constructor"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "user",
+                            "type": "address",
+                            "indexed": true
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "token",
+                            "type": "address",
+                            "indexed": true
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "amount",
+                            "type": "uint256",
+                            "indexed": false
+                        }
+                    ],
+                    "type": "event",
+                    "name": "Deposit",
+                    "anonymous": false
+                },
+                {
+                    "inputs": [],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "name": "PERMIT2",
+                    "outputs": [
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        }
+                    ]
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "name": "balances",
+                    "outputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ]
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "struct ISignatureTransfer.PermitTransferFrom",
+                            "name": "permit",
+                            "type": "tuple",
+                            "components": [
+                                {
+                                    "internalType": "struct ISignatureTransfer.TokenPermissions",
+                                    "name": "permitted",
+                                    "type": "tuple",
+                                    "components": [
+                                        {
+                                            "internalType": "address",
+                                            "name": "token",
+                                            "type": "address"
+                                        },
+                                        {
+                                            "internalType": "uint256",
+                                            "name": "amount",
+                                            "type": "uint256"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "nonce",
+                                    "type": "uint256"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "deadline",
+                                    "type": "uint256"
+                                }
+                            ]
+                        },
+                        {
+                            "internalType": "struct ISignatureTransfer.SignatureTransferDetails",
+                            "name": "transferDetails",
+                            "type": "tuple",
+                            "components": [
+                                {
+                                    "internalType": "address",
+                                    "name": "to",
+                                    "type": "address"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "requestedAmount",
+                                    "type": "uint256"
+                                }
+                            ]
+                        },
+                        {
+                            "internalType": "bytes",
+                            "name": "signature",
+                            "type": "bytes"
+                        }
+                    ],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "name": "depositWithPermit2"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "_token",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "_user",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "name": "getBalance",
+                    "outputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ]
+                }
+            ],
+            "devdoc": {
+                "kind": "dev",
+                "methods": {},
+                "version": 1
+            },
+            "userdoc": {
+                "kind": "user",
+                "methods": {},
+                "version": 1
+            }
+        },
+        "settings": {
+            "remappings": [
+                "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+                "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+                "ds-test/=lib/permit2/lib/forge-std/lib/ds-test/src/",
+                "forge-gas-snapshot/=lib/permit2/lib/forge-gas-snapshot/src/",
+                "forge-std/=lib/forge-std/src/",
+                "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+                "permit2/=lib/permit2/",
+                "solmate/=lib/permit2/lib/solmate/"
+            ],
+            "optimizer": {
+                "enabled": true,
+                "runs": 200
+            },
+            "metadata": {
+                "bytecodeHash": "ipfs"
+            },
+            "compilationTarget": {
+                "src/TokenBank.sol": "TokenBank"
+            },
+            "evmVersion": "london",
+            "libraries": {},
+            "viaIR": true
+        },
+        "sources": {
+            "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
+                "keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+                "urls": [
+                    "bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+                    "dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+                ],
+                "license": "MIT"
+            },
+            "lib/permit2/src/interfaces/IEIP712.sol": {
+                "keccak256": "0xfdccf2b9639070803cd0e4198427fb0df3cc452ca59bd3b8a0d957a9a4254138",
+                "urls": [
+                    "bzz-raw://f7c936ac42ce89e827db905a1544397f8bdf46db34cdb6aa1b90dea42fdb4c72",
+                    "dweb:/ipfs/QmVgurxo1N31qZqkPBirw9Z7S9tLYmv6jSwQp8R8ur2cBk"
+                ],
+                "license": "MIT"
+            },
+            "lib/permit2/src/interfaces/ISignatureTransfer.sol": {
+                "keccak256": "0xe6df9966f8841dc3958ee86169c89de97e7f614c81c28b9dc947b12d732df64e",
+                "urls": [
+                    "bzz-raw://3d4eafdee7f48c3be8350a94eb6edd0bfb2af2c105df65787a77174f356c0317",
+                    "dweb:/ipfs/QmY1j2adeeAhNpn6cUuthemxGCdLXHTfyMh9yTKsY4mZ2d"
+                ],
+                "license": "MIT"
+            },
+            "src/TokenBank.sol": {
+                "keccak256": "0xc035206bfd4b2019eb134e50e16c98a53f2bfb3c3eb526886785c79590b4794a",
+                "urls": [
+                    "bzz-raw://a22063ae7145eb8688209d5f4032545074878da56b0cd47133fff315c3bf6dc4",
+                    "dweb:/ipfs/QmSRXVMGACs8HVRpd7CGKPGg1yGgHxFFeKsbg8smEvou6T"
+                ],
+                "license": "MIT"
+            }
+        },
+        "version": 1
+    },
+    "id": 31
+}
