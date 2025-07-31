@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // 或更高版本，例如 "ESNext"
+    "module": "CommonJS", // 或 "ESNext", 根据你的项目需求
+    "esModuleInterop": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "outDir": "./dist"
+  },
+  "include": ["./*.ts"] // 确保包含你的 TypeScript 文件
+}
